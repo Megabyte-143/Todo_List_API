@@ -6,7 +6,7 @@ var mongoDB = require("mongodb");
 const mongoose = require("mongoose");
 var bodyParser= require("body-parser");
 
-const Model = require("./database");
+const Model = require("./database.js");
 
 //INITIALIZATION
 const todo = express();
