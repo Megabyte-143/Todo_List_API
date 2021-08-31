@@ -1,15 +1,14 @@
-const mongoose= require("mongoose");
+const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema(
     {
         TASK: String,
-        TIME: String,
-        STATUS: Boolean,
-
+        ID: String,
+        STATUS: false,
     }
 );
 
-const Model = mongoose.model("Schema",Schema);
+const Model = mongoose.model("Schema", Schema);
 
 module.exports = Model;
 
