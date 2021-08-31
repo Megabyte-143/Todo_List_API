@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
-const Schema = mongoose.Schema(
+const TaskSchema = mongoose.Schema(
     {
         TASK: String,
         ID: String,
-        STATUS: false,
+        STATUS: Boolean,
     }
 );
 
-const Model = mongoose.model("Schema", Schema);
+const TaskModel = mongoose.model("TaskSchema", TaskSchema);
 
-module.exports = Model;
+module.exports = TaskModel;
 
