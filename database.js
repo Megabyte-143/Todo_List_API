@@ -3,8 +3,8 @@ const mongoose = require("mongoose");
 const TaskSchema = mongoose.Schema(
     {
         TASK: String,
-        ID: String,
-        STATUS: Boolean,
+        ID: Number,
+        STATUS: { type:Boolean, default: false },
     }
 );
 

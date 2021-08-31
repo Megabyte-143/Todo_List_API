@@ -77,12 +77,14 @@ todo.post("/add", (req, res) => {
     Methods             PUT
 */
 todo.put("/update/:id", async (req, res) => {
+    const stat = req.body.stat;
+
     const updateList = await TaskModel.findOneAndUpdate(
         {
             ID: req.params.id
         },
         {
-            STATUS: false,
+            STATUS: stat
         },
         {
             new: true
@@ -102,7 +104,7 @@ todo.put("/update/:id", async (req, res) => {
 todo.delete("/delete/:id", async (req, res) => {
 
     const newList = await TaskModel.findOneAndDelete({
-        ID: req.params.id.toString
+        ID: req.params.id
     });
     return res.json({
         list: { TaskModel },
