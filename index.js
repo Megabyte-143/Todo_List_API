@@ -114,7 +114,7 @@ todo.delete("/delete/:id", async (req, res) => {
 
 
 //~~~~~~~~~~~~~~~~LISTEN~~~~~~~~~~~~~~~~
-todo.listen(3000, () => {
+todo.listen(process.env.PORT || 3000, () => {
     console.log("Listeninggggg......");
 });
 
