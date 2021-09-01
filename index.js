@@ -47,7 +47,7 @@ mongoose.connect(process.env.MONGO_URL, {
 */
 todo.get("/", async (req, res) => {
     const list = await TaskModel.find();
-    return res.json({list});
+    return res.json(list);
 });
 
 
